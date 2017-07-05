@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.util.function.Consumer;
 
 public class ConsoleUI {
-    private final FunctionThatThrows<String, IOException> in;
+    private final FunctionThatThrows<String> in;
     private final Consumer<String> out;
     private Game game;
 
-    public ConsoleUI(Game game, FunctionThatThrows<String, IOException> in, Consumer<String> out) {
+    public ConsoleUI(Game game, FunctionThatThrows<String> in, Consumer<String> out) {
         this.game = game;
         this.in = in;
         this.out = out;
